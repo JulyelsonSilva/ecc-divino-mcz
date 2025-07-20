@@ -8,6 +8,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 class Encontrista(db.Model):
+    __tablename__ = 'encontrista'
     id = db.Column(db.Integer, primary_key=True)
     nome_ele = db.Column(db.String(100))
     nome_ela = db.Column(db.String(100))
